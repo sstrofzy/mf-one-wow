@@ -4,12 +4,12 @@
     const importMap = {
       
         "react": async () => {
-          let pkg = await import("__mf__virtual/auth_mf_2_app__prebuild__react__prebuild__.js")
+          let pkg = await import("__mf__virtual/microfrontendWorkspace__prebuild__react__prebuild__.js")
           return pkg
         }
       ,
         "react-dom": async () => {
-          let pkg = await import("__mf__virtual/auth_mf_2_app__prebuild__react_mf_2_dom__prebuild__.js")
+          let pkg = await import("__mf__virtual/microfrontendWorkspace__prebuild__react_mf_2_dom__prebuild__.js")
           return pkg
         }
       
@@ -21,7 +21,7 @@
             version: "18.3.1",
             scope: ["default"],
             loaded: false,
-            from: "auth-app",
+            from: "microfrontendWorkspace",
             async get () {
               usedShared["react"].loaded = true
               const {"react": pkgDynamicImport} = importMap 
@@ -38,7 +38,7 @@
             },
             shareConfig: {
               singleton: true,
-              requiredVersion: "^18.3.1"
+              requiredVersion: "^18.0.0"
             }
           }
         ,
@@ -47,7 +47,7 @@
             version: "18.3.1",
             scope: ["default"],
             loaded: false,
-            from: "auth-app",
+            from: "microfrontendWorkspace",
             async get () {
               usedShared["react-dom"].loaded = true
               const {"react-dom": pkgDynamicImport} = importMap 
@@ -64,7 +64,7 @@
             },
             shareConfig: {
               singleton: true,
-              requiredVersion: "^18.3.1"
+              requiredVersion: "^18.0.0"
             }
           }
         

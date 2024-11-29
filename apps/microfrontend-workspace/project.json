@@ -1,0 +1,23 @@
+{
+  "name": "microfrontend-workspace",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/microfrontend-workspace/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project microfrontend-workspace --web",
+  "targets": {
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "options": {
+        "configFile": "apps/microfrontend-workspace/vite.config.ts"
+      }
+    },
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "options": {
+        "outputPath": "dist/apps/microfrontend-workspace",
+        "configFile": "apps/microfrontend-workspace/vite.config.ts"
+      }
+    }
+  }
+}
